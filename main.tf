@@ -31,7 +31,7 @@ resource "aws_iot_policy_attachment" "thing_policy_attachment" {
 }
 
 
-resource "aws_iot_thing_principal_attachment" "thing-3-attachment" {
+resource "aws_iot_thing_principal_attachment" "thing_cert_attachment" {
   for_each  = aws_iot_thing.aws_thing
   principal = aws_iot_certificate.things_cert.arn
   thing     = each.value.name
