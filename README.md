@@ -10,13 +10,13 @@ This repo is part of [AutoMagic Light]("https://github.com/users/moraesjeremias/
 
 Assign the following variables in a `terraform.tfvars` file:
 
-| variable       | description                                      | type         |     |
-| -------------- | ------------------------------------------------ | ------------ | --- |
-| region         | AWS Region IoT things will be deployed           | string       |     |
-| thing_type     | Thing type, eg. Publisher, Subscriber, Router... | string       |     |
-| iot_policy\*   | A Policy to be attached to certificate           | string       |     |
-| sonoff_id_list | List of things ids to be created                 | list(string) |     |
-| thing_group    | The things group in AWS                          | string       |     |
+| variable       | description                                      | type         |
+| -------------- | ------------------------------------------------ | ------------ |
+| region         | AWS Region IoT things will be deployed           | string       |
+| thing_type     | Thing type, eg. Publisher, Subscriber, Router... | string       |
+| iot_policy\*   | A Policy to be attached to certificate           | string       |
+| sonoff_id_list | List of things ids to be created                 | list(string) |
+| thing_group    | The things group in AWS                          | string       |
 
 > Note: iot_policy in this repo was previously manually created, but it can be managed by Terraform as well.
 
