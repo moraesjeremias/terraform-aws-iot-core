@@ -4,7 +4,7 @@ Terraform Infrastructure as Code for AWS IoT Core Things deployment
 
 ## Motivation
 
-This repo is part of [AutoMagic Light]("https://github.com/users/moraesjeremias/projects/2") project, helping automating iot things deployment in AWS.
+This repo is part of [AutoMagic Light](https://github.com/users/moraesjeremias/projects/2) project, helping automating iot things deployment in AWS.
 
 ## Usage
 
