@@ -1,8 +1,3 @@
-variable "terraform_profile" {
-  type      = string
-  sensitive = true
-}
-
 variable "region" {
   type = string
 }
