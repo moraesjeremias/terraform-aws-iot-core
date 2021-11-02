@@ -2,9 +2,6 @@ variable "region" {
   type = string
 }
 
-variable "thing_type" {
-  type = string
-}
 
 variable "iot_policy" {
   type = string
@@ -14,6 +11,14 @@ variable "sonoff_id_list" {
   type = list(string)
 }
 
-variable "thing_group" {
+variable "publisher_id_list" {
+  type = list(string)
+}
+
+variable "subscriber_group" {
+  type = string
+}
+
+variable "publisher_group" {
   type = string
 }
