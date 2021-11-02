@@ -10,21 +10,21 @@ This repo is part of [AutoMagic Light](https://github.com/users/moraesjeremias/p
 
 Assign the following variables in a `terraform.tfvars` file:
 
-| variable       | description                                      | type         |
-| -------------- | ------------------------------------------------ | ------------ |
-| region         | AWS Region IoT things will be deployed           | string       |
-| thing_type     | Thing type, eg. Publisher, Subscriber, Router... | string       |
-| iot_policy\*   | A Policy to be attached to certificate           | string       |
-| sonoff_id_list | List of things ids to be created                 | list(string) |
-| thing_group    | The things group in AWS                          | string       |
+| variable          | description                            | type         |
+|-------------------|----------------------------------------|--------------|
+| region            | AWS Region IoT things will be deployed | string       |
+| sonoff_id_list    | List of subscribers ids to be created  | list(string) |
+| publisher_id_list | List of publishers ids to be created   | list(string) |
+| iot_policy        | A base64 encoded AWS IoT json Policy   | string       |
+| subscriber_group  | Subscriber group in AWS                | string       |
+| publisher_group   | Publisher group in AWS                 | string       |
 
-> Note: iot_policy in this repo was previously manually created, but it can be managed by Terraform as well.
-
+> Note: find an example in `example.tfvars`
 ## AWS Credentials
 
 ### Using local profiles
 
-You may use AWS CLI profile directive in aws provider section in `main.tf` file. Eg:
+You may use AWS CLI profile directive in aws provider section in `backend.tf` file. Eg:
 
 #### Usage
 
