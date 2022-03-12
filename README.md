@@ -19,7 +19,10 @@ Assign the following variables in a `terraform.tfvars` file:
 | subscriber_group  | Subscriber group in AWS                | string       |
 | publisher_group   | Publisher group in AWS                 | string       |
 
-> Note: find an example in `example.tfvars`
+> Note: find examples both in `example.tfvars` and `policy/policy.example.json`
+
+> Enconde `policy/policy.example.json` in base64 format and use it for `iot_policy`
+
 ## AWS Credentials
 
 ### Using local profiles
@@ -47,16 +50,16 @@ $ export AWS_DEFAULT_REGION="us-east-1"
 
 ## Initialize Terraform
 
-`terraform init`
+`terraform init -reconfigure -backend-config="./config/backend.conf"`
 
 ## Create the Plan
 
-`terraform plan`
+`terraform plan -var-file=variables.tfvars`
 
 ## Apply the Plan
 
-`terraform apply -auto-approve`
+`terraform apply -auto-approve -var-file=variables.tfvars`
 
 ## Teardown
 
-`terraform destroy -auto-approve`
+`terraform destroy -auto-approve -var-file=variables.tfvars`
