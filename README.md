@@ -8,20 +8,11 @@ This repo is part of [AutoMagic Light](https://github.com/users/moraesjeremias/p
 
 ## Usage
 
-Assign the following variables in a `terraform.tfvars` file:
+Check `aws_iot_application` [README](./modules/aws_iot_application/README.MD) and create a `.tfvars` file:
 
-| variable          | description                            | type         |
-|-------------------|----------------------------------------|--------------|
-| region            | AWS Region IoT things will be deployed | string       |
-| sonoff_id_list    | List of subscribers ids to be created  | list(string) |
-| publisher_id_list | List of publishers ids to be created   | list(string) |
-| iot_policy        | A base64 encoded AWS IoT json Policy   | string       |
-| subscriber_group  | Subscriber group in AWS                | string       |
-| publisher_group   | Publisher group in AWS                 | string       |
+> Note: find a policy example in `policy/policy.example.json`
 
-> Note: find examples both in `example.tfvars` and `policy/policy.example.json`
-
-> Enconde `policy/policy.example.json` in base64 format and use it for `iot_policy`
+> Enconde `policy/policy.example.json` in base64 format and use it for `iot_policy` variable
 
 ## AWS Credentials
 
