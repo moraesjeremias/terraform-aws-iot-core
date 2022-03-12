@@ -1,0 +1,40 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "iot:Publish",
+      "Resource": "arn:aws:iot:us-east-1:<AWS_ACCOUNT_ID>:topic/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Subscribe",
+      "Resource": "arn:aws:iot:us-east-1:<AWS_ACCOUNT_ID>:topicfilter/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Connect",
+      "Resource": "arn:aws:iot:us-east-1:<AWS_ACCOUNT_ID>:client/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Receive",
+      "Resource": "arn:aws:iot:us-east-1:<AWS_ACCOUNT_ID>:topic/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:UpdateThingShadow",
+      "Resource": "arn:aws:iot:us-east-1:<AWS_ACCOUNT_ID>:thing/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:GetThingShadow",
+      "Resource": "arn:aws:iot:us-east-1:<AWS_ACCOUNT_ID>:thing/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:DeleteThingShadow",
+      "Resource": "arn:aws:iot:us-east-1:<AWS_ACCOUNT_ID>:thing/*"
+    }
+  ]
+}
