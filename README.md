@@ -50,7 +50,7 @@ $ export AWS_DEFAULT_REGION="us-east-1"
 
 ## Initialize Terraform
 
-`terraform init -reconfigure -backend-config="./config/backend.conf"`
+`terraform init -reconfigure -backend-config="../config/backend.conf"`
 
 ## Create the Plan
 
