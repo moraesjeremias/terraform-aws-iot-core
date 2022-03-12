@@ -2,9 +2,9 @@ variable "region" {
   type = string
 }
 
-
 variable "iot_policy" {
   type = string
+  sensitive = true
 }
 
 variable "sonoff_id_list" {

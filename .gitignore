@@ -28,3 +28,6 @@ certs/*
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 *tfplan*
+
+# Terraform Backend configuration
+backend.conf
